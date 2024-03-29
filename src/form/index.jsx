@@ -18,21 +18,7 @@ const Form = () => {
 
   const onSubmit = () => {
     if (activeStep === steps.length - 1) {
-      emailjs
-        .sendForm(
-          "service_rijoxoc",
-          "template_qrqsx7o",
-          formRef.current,
-          "uh2R_kbxSvUJcSKXh"
-        )
-        .then(
-          () => {
-            console.log("SUCCESS!");
-          },
-          (error) => {
-            console.log("FAILED...", error.text);
-          }
-        );
+      console.log("Form submitted");
     } else {
       setActiveStep((prevStep) => prevStep + 1);
     }
